@@ -1,0 +1,136 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Joueur",
+		"_postman_id": "851c472c-3e00-6451-afaa-d86be7dda0dd",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "liste des joueurs",
+			"request": {
+				"url": "localhost:8080/joueur/list",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Sylvain",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ajouter un joueur",
+			"request": {
+				"url": "localhost:8080/joueur/alphonse",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": 0,\n        \"pseudo\": \"sylborg\"\n    },\n    {\n        \"id\": 1,\n        \"pseudo\": \"lorenita\"\n    }\n]"
+				},
+				"description": "Ajouter un joueur"
+			},
+			"response": []
+		},
+		{
+			"name": "get joueur par id",
+			"request": {
+				"url": "localhost:8080/joueur/1",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Sylvain",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get joueur par pseudo",
+			"request": {
+				"url": "localhost:8080/joueur/pseudo/alphone",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Sylvain",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "mise à jour d'un joueur",
+			"request": {
+				"url": "localhost:8080/joueur/2/invite",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Sylvain",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Donner l'identifiant et le pseudo du joueur"
+			},
+			"response": []
+		},
+		{
+			"name": "suppression d'un joueur",
+			"request": {
+				"url": "localhost:8080/joueur/2",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Sylvain",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Par identifiant"
+			},
+			"response": []
+		}
+	]
+}

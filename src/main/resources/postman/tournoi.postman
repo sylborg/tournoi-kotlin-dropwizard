@@ -1,0 +1,171 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Tournoi API",
+		"_postman_id": "8501ef9d-41dd-2702-fd9b-7cdbf9e63e8c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "liste des tournois",
+			"request": {
+				"url": "localhost:8080/tournoi/list",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get tournoi par id",
+			"request": {
+				"url": "localhost:8080/tournoi/0",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ajouter des joueurs",
+			"request": {
+				"url": "localhost:8080/tournoi/0/ajouter/joueurs",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n{\n        \"id\": 0,\n        \"pseudo\": \"sylborg\"\n    },\n    {\n        \"id\": 1,\n        \"pseudo\": \"lorenita\"\n    },\n    {\n        \"id\": 2,\n        \"pseudo\": \"fred\"\n    }, \n    {\n        \"id\": 3,\n        \"pseudo\": \"zozor\"\n    }\n]"
+				},
+				"description": "Ajouter des joueurs à un tournoi (éventuellement avec leur nombre de points)"
+			},
+			"response": []
+		},
+		{
+			"name": "mise à jour points",
+			"request": {
+				"url": "localhost:8080/tournoi/0/joueur/0/points/10",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[]"
+				},
+				"description": "Sert à mettre à jour les points d'un joueur"
+			},
+			"response": []
+		},
+		{
+			"name": "get points par joueur",
+			"request": {
+				"url": "localhost:8080/tournoi/0/joueur/0/points",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "classement tournoi",
+			"request": {
+				"url": "localhost:8080/tournoi/0/classement",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[]"
+				},
+				"description": "donne le classement du tournoi"
+			},
+			"response": []
+		},
+		{
+			"name": "supprimer joueurs",
+			"request": {
+				"url": "localhost:8080/tournoi/0/joueurs",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[]"
+				},
+				"description": "supprimer les joueurs d'un tournoi à la fin de celui-ci"
+			},
+			"response": []
+		},
+		{
+			"name": "classement joueur",
+			"request": {
+				"url": "localhost:8080/tournoi/0/joueur/3/classement",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[]"
+				},
+				"description": "Récupère le classement d'un joueur sur un tournoi donné"
+			},
+			"response": []
+		}
+	]
+}
