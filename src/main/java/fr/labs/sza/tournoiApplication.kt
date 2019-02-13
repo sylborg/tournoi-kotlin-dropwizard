@@ -18,7 +18,6 @@ class tournoiApplication : Application<tournoiConfiguration>() {
     }
 
     override fun initialize(bootstrap: Bootstrap<tournoiConfiguration>?) {
-        // TODO: application initialization
         applicationComponent = DaggerApplicationComponent.builder().build()
         applicationComponent!!.inject(this)
     }
